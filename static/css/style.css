@@ -1,0 +1,18 @@
+body {
+  background: #f7f9fc;
+}
+.log-area {
+  height: 300px;
+  overflow-y: auto;
+  background: #ffffff;
+  border: 1px solid #e6e9ee;
+  padding: 10px;
+  border-radius: 6px;
+}
+.log-item { padding: 6px; margin-bottom: 6px; border-radius: 4px; }
+.log-item.info { background: #eef2ff; color: #1f2d6e }
+.log-item.sistema { background: #f0f8ff; color: #0b5394 }
+.log-item.cliente { background: #eafaf1; color: #1b6f3a }
+.log-item.error { background: #fff0f0; color: #8b1c1c }
+
+#status { font-weight: 600; margin-top: 6px }

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Agente de Voz - Academia Sin Fronteras</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-primary">
+      <div class="container-fluid">
+        <span class="navbar-brand mb-0 h1">🎓 Academia Sin Fronteras — Agente de Voz</span>
+      </div>
+    </nav>
+
+    <main class="container my-4">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Asistente Virtual</h5>
+              <p class="card-text">Bienvenido. Nuestro agente virtual atenderá llamadas simuladas desde el navegador, reconocerá su voz y propondrá agendamientos.</p>
+              <div class="mb-3">
+                <button id="btnStart" class="btn btn-success">▶ Iniciar agente</button>
+                <button id="btnStop" class="btn btn-danger" disabled>⏹ Detener</button>
+              </div>
+
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" value="" id="optSchedule" checked>
+                <label class="form-check-label" for="optSchedule">Preguntar por agendamiento automáticamente</label>
+              </div>
+
+              <div id="log" class="log-area"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Registro</h5>
+              <form id="leadForm">
+                <div class="mb-3">
+                  <label for="name" class="form-label">Nombre</label>
+                  <input type="text" class="form-control" id="name" placeholder="Ej. María Pérez">
+                </div>
+                <div class="mb-3">
+                  <label for="phone" class="form-label">Teléfono</label>
+                  <input type="text" class="form-control" id="phone" placeholder="Ej. 573001112222">
+                </div>
+                <div class="mb-3">
+                  <label for="interest" class="form-label">Interés</label>
+                  <input type="text" class="form-control" id="interest" placeholder="Ej. Cursos de Python">
+                </div>
+                <button id="btnSend" type="button" class="btn btn-primary">Enviar</button>
+              </form>
+
+              <hr>
+              <h6>Estado</h6>
+              <div id="status">Inactivo</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="/static/js/agent.js"></script>
+  </body>
+  </html>
